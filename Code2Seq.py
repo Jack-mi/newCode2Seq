@@ -134,6 +134,7 @@ class MyDataset(Dataset):
         self.data_path = data_path
         self.num_k = num_k
 
+    # 获取data_path中第idx个文件，存储一个java method（AST+target）
     def __getitem__(self, idx):
         path = self.data_path + '/{:0>6d}.txt'.format(idx)
         with open(path, 'r') as f:

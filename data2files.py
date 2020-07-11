@@ -10,9 +10,9 @@ def read_args():
 
 if __name__ == '__main__':
     # arg = read_args()
-    f = open('data/java-small/java-small.train.c2s', 'r')
+    f = open('data/java-small/java-small.dict.c2s', 'r')
     cnt = 0
-    data_dir = 'data/java-small/train'
+    data_dir = 'data/java-small/val'
     for line in f:
         content = f.readline()
         if content == '' or content == '\n':
@@ -21,5 +21,5 @@ if __name__ == '__main__':
         fnew.write(content)
         cnt += 1
         print("Now :{}".format(cnt))
-        # if cnt == 5:
-        #     break
+        if cnt == 5:
+            break

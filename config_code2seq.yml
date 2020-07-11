@@ -1,5 +1,5 @@
 data:
-  home: /Users/liuxiaosu/PycharmProjects/MyCode2Seq/data
+  home: /Users/liuxiaosu/PycharmProjects/newCode2Seq/data
   dict: /java-small/java-small.dict.c2s
   train: /java-small/train
   valid: /java-small/val
