@@ -18,7 +18,8 @@ l2 = 0
 learning_rate = 2e-5
 Input_size = 768
 Hidden_size = 768
-model_path = '/Users/liuxiaosu/chinese_L-12_H-768_A-12/'
+model_path = '/home/xiaosuliu/chinese_L-12_H-768_A-12/'
+data_path = '/home/xiaosuliu/codebase/1-tomcat'
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 config_path = os.path.join(model_path, 'config.json')
 checkpoint_path = os.path.join(model_path, 'model.ckpt.index')
@@ -81,7 +82,6 @@ class MyDataSet(Dataset):
 
 def prepare_data(idx):
 
-    data_path = '/Users/liuxiaosu/codebase/1-tomcat'
     df = pd.read_csv(os.path.join(data_path, 'allData.csv'))
     X = np.array(df['func'])
     Y = np.array(df['comm'])
